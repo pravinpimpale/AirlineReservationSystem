@@ -233,6 +233,29 @@ public class TicketDetails extends JFrame {
 		JButton b1 = new JButton("Confirm Ticket");
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				String sta = null;
+				String sta1="Booked";//"One Way","Return Trip"
+				String sta2="unbooked";
+				
+				try {
+				pst2=con.prepareStatement("SELECT status from seat where seat='"+t6.getText()+"'");
+				ResultSet rs2=(ResultSet) pst2.executeQuery();
+				while(rs2.next()) {
+					sta=rs2.getString("status").toString();
+					//System.out.println(sta);
+				}
+				
+				}catch(Exception e1){ System.out.println(e1);}
+				
+				
+			
+					if(sta.equals(sta2)) {
+						
+//						System.out.println(sta);
+					
+				
+				
 				String seat=t6.getText();
 				String flightid=t4.getText();
 				SimpleDateFormat Date_Format= new SimpleDateFormat("dd/mm/yyyy");
@@ -293,8 +316,11 @@ public class TicketDetails extends JFrame {
 						frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 						frame.l12.setText(seat);
 						frame.l27_1.setText(seat);
-				
-				 
+						
+					}else {
+						JOptionPane.showMessageDialog(null,"Your Ticket is Already Booked....Plz Choose Another"); 
+					}
+					
 			}
 		});
 		b1.setForeground(new Color(0, 0, 128));

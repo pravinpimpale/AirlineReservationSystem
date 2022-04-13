@@ -326,13 +326,6 @@ public class userticket extends JFrame {
 		
 		
 		
-		
-		
-		
-	
-			
-		
-		
 		try {
 			pst=con.prepareStatement("SELECT flight_name,source,destination,flight_id,departure,date from flight");//SELECT flight.flight_name,flight.source,flight.destination,flight.flight_id,flight.departure,flight.date,userdata.username FROM flight left JOIN userdata ON flight.id = userdata.id
 			ResultSet rs=pst.executeQuery();
@@ -345,13 +338,7 @@ public class userticket extends JFrame {
 				l18.setText(username);
 			}
 			
-			pst2=con.prepareStatement("SELECT seat from seat");
-			ResultSet rs2=pst2.executeQuery();
-			while(rs2.next()) {
-				username=rs2.getString("username");
-				l4.setText(username);
-				l18.setText(username);
-			}
+			
 			
 			while(rs.next()) {
 				

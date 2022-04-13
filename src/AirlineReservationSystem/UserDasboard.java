@@ -127,5 +127,10 @@ public class UserDasboard extends JFrame {
 		l9.setVerticalAlignment(SwingConstants.TOP);
 		l9.setBounds(10, 11, 348, 354);
 		p3.add(l9);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("G:\\JAVA\\10 - Copy (3).jpg"));
+		lblNewLabel.setBounds(0, 0, 964, 376);
+		p3.add(lblNewLabel);
 	}
 }

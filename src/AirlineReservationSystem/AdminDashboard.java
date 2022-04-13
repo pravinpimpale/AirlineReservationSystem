@@ -114,6 +114,10 @@ public class AdminDashboard extends JFrame {
 		l8.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
 		l8.setBounds(463, 11, 92, 40);
 		p2.add(l8);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("G:\\JAVA\\10 - Copy (2).jpg"));
+		lblNewLabel.setBounds(10, 184, 964, 366);
+		contentPane.add(lblNewLabel);
 	}
-
 }
